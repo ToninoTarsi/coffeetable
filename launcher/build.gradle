@@ -4,16 +4,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.3.0'
     }
 }
 apply plugin: 'com.android.application'
 
-repositories {
-    google()
-    jcenter()
-    maven { url "https://jitpack.io" }
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+    }
 }
+
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
